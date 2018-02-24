@@ -1,6 +1,8 @@
 {% extends 'core/base.html' %}
 
 {% block content %}
+    {% include 'includes/registration_modal.html' %}
+
 <div class="row">
     <div class="col-lg-4 login-title">
         Login and play!
@@ -26,14 +28,13 @@
             {{ form.password }}
             </div>
             <button id="loginBtn" type="submit" value="login" class="btn btn-dark">Log-in</button>
-
             <input type="hidden" name="next" value="{{ next }}" />
         </form>
     </div>
 </div>
 <div class="row">
     <div class="col-lg-4 register">
-        <a href="#">Nie masz konta? Zarejestruj sie</a>
+        <a href="{% url 'signup' %}">Nie masz konta? Zarejestruj sie</a>
     </div>
 
 </div>
