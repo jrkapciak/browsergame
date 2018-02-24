@@ -1,4 +1,18 @@
 body {
-    background: -webkit-linear-gradient(50deg, #3f3f3f, #000000);
-    background: linear-gradient(50deg, #3f3f3f, #000000);
+    /*background: -webkit-linear-gradient(50deg, #3f3f3f, #000000);*/
+    /*background: linear-gradient(50deg, #3f3f3f, #000000);*/
+    background-image: url('../images/background.jpg');
+    color: white;
 }
+
+.game-title {
+    text-align: center;
+    padding: 4%;
+    font-size: 3rem;
+    color: #cc3300;
+    font-family: 'Bellefair', serif;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-shadow: 3px 3px #222222;
+}
+
