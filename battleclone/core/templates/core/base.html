@@ -1,0 +1,30 @@
+{% load i18n %}
+{% load static %}
+<html>
+<head>
+    {% block css %}
+    {% endblock %}
+
+    {% block extra_css %}
+    {% endblock %}
+
+    {% block icon %}
+        <link rel="icon" href="{% static 'core/images/icon.png' %}">
+    {% endblock %}
+
+    {% block title %}
+    <title>BattleClone</title>
+    {% endblock %}
+
+
+</head>
+<body>
+
+</body>
+{% block js %}
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}
+
+</html>
