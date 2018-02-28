@@ -4,5 +4,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url('^', include('django.contrib.auth.urls')),
-    url('^singup/$', views.signup, name='signup'),
+    url(r'^signup/', views.RegistrationView.as_view(), name='signup'),
 ]
