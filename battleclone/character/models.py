@@ -1,7 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext as _
 from django.core.validators import MaxValueValidator, MinValueValidator
-# Create your models here.
 
 
 class Parameters(models.Model):
