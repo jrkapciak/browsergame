@@ -10,11 +10,12 @@ from .forms import SignUpForm
 class RegistrationView(CreateView):
     form_class = SignUpForm
     template_name = 'registration/register.html'
+    success_url = '/login'
 
     def dispatch(self, request, *args, **kwargs):
 
         if request.user.is_authenticated():
-            print('dsadsadsa')
+            # TODO: need to create return redirect to homepage or somf
             return HttpResponseForbidden()
 
         return super().dispatch(request, *args, **kwargs)
@@ -24,7 +25,7 @@ class RegistrationView(CreateView):
         new_user.set_password(form.cleaned_data['password'])
         new_user.save()
 
-        return HttpResponse('User registered')
+        return super().form_valid(form)
 
 
 
