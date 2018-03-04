@@ -7,5 +7,4 @@ from battleclone.account.models import UserProfile
 def game(request):
     template_name = 'core/game_view.html'
     context = {'profile': UserProfile.objects.get(user=request.user)}
-
     return render(request, template_name, context)

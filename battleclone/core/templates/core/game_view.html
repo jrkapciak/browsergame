@@ -4,4 +4,5 @@
 {% block content %}
     <h2>{{ profile.pk }}</h2>
     <a href="{% url 'edit_profile' profile.pk %}">EDIT YOUR PROFIle</a>
+    <a href="{% url 'logout' %}">logout</a>
 {% endblock %}

@@ -1,8 +1,7 @@
 {% extends 'core/base.html' %}
 
 {% block content %}
-   <h2>dsadsadsa</h2>
-
+<h2>Edytuj profil</h2>
 <form method="post" action="">{% csrf_token %}
     <table>
         {{ form.as_p }}
@@ -11,4 +10,5 @@
 <button type="submit">UPDA</button>
 </form>
 
+    <a href="{% url 'password_change' %}"> <h2>ZMIEN HASLO</h2></a>
 {% endblock %}
