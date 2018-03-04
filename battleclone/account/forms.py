@@ -18,3 +18,4 @@ class SignUpForm(forms.ModelForm):
             raise ValidationError("Password didn't match")
 
         return data['password2']
+

@@ -1,0 +1,7 @@
+{% extends 'core/base.html' %}
+
+
+{% block content %}
+    <h2>{{ profile.pk }}</h2>
+    <a href="{% url 'edit_profile' profile.pk %}">EDIT YOUR PROFIle</a>
+{% endblock %}

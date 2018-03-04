@@ -1,10 +1,8 @@
 from django.http import HttpResponseForbidden, HttpResponse
-from django.shortcuts import render
-from django.views.generic import CreateView
+from django.shortcuts import render, reverse
+from django.views.generic import CreateView, UpdateView
 from .forms import SignUpForm
-
-
-# Create your views here.
+from .models import UserProfile
 
 
 class RegistrationView(CreateView):
@@ -26,6 +24,17 @@ class RegistrationView(CreateView):
         new_user.save()
 
         return super().form_valid(form)
+
+
+class EditProfileView(UpdateView):
+    model = UserProfile
+    fields = ('description', 'avatar',)
+    template_name = 'profile/edit_profile.html'
+    slug_field = 'pk'
+
+    def get_success_url(self):
+        return reverse('edit_profile', kwargs=dict(pk=self.get_object().pk))
+
 
 
 

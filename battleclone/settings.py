@@ -125,4 +125,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # LOGIN
-LOGIN_REDIRECT_URL = '/game/'
+LOGIN_REDIRECT_URL = ''
+LOGIN_URL = '/login'

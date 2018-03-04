@@ -19,4 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('battleclone.account.urls')),
+    url(r'', include('battleclone.core.urls')),
 ]
