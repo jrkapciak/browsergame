@@ -1,5 +1,5 @@
-from django.http import HttpResponseForbidden, HttpResponse
-from django.shortcuts import render, reverse
+from django.http import HttpResponseForbidden
+from django.shortcuts import reverse
 from django.views.generic import CreateView, UpdateView
 from .forms import SignUpForm
 from .models import UserProfile
@@ -45,7 +45,6 @@ class RegistrationView(CreateView):
         return super().form_valid(form)
 
 
-
 class EditProfileView(UpdateView):
     model = UserProfile
     fields = ('description', 'avatar',)
@@ -54,7 +53,3 @@ class EditProfileView(UpdateView):
 
     def get_success_url(self):
         return reverse('edit_profile', kwargs=dict(pk=self.get_object().pk))
-
-
-
-

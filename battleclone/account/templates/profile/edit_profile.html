@@ -1,14 +1,13 @@
-{% extends 'core/base.html' %}
+{% extends 'core/game.html' %}
 
-{% block content %}
-<h2>Edytuj profil</h2>
-<form method="post" action="">{% csrf_token %}
-    <table>
-        {{ form.as_p }}
 
-    </table>
-<button type="submit">UPDA</button>
-</form>
-
-    <a href="{% url 'password_change' %}"> <h2>ZMIEN HASLO</h2></a>
-{% endblock %}
+{#<h2>Edytuj profil</h2>#}
+{#<form method="post" enctype="multipart/form-data" action="">{% csrf_token %}#}
+{#    <table>#}
+{#        {{ form.as_p }}#}
+{##}
+{#    </table>#}
+{#<button type="submit">UPDA</button>#}
+{#</form>#}
+{##}
+{#    <a href="{% url 'password_change' %}"> <h2>ZMIEN HASLO</h2></a>#}

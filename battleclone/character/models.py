@@ -8,7 +8,6 @@ class Parameters(models.Model):
     strength, agility, luck etc
 
     """
-    pass
 
 
 class Equipment(models.Model):
