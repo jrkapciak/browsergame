@@ -1,15 +1,22 @@
 {% extends 'core/base.html' %}
 {% load i18n %}
 
+{% block game_header %}
+{# Remove header#}
+{% endblock %}
+
 {% block content %}
 <div class="row">
+    <div class="col-12 game-container">
+
     {% block menu %}
-        <div class="col-4">
+        <div class="col-3">
         {% include 'core/includes/menu.html' %}
         </div>
     {% endblock %}
 
     {% block game_view %}
     {% endblock %}
+    </div>
 </div>
 {% endblock %}

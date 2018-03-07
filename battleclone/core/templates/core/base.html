@@ -29,11 +29,13 @@
 </head>
 <body>
 <div class="container">
+        {% block game_header %}
         <div class="row">
             <div class="col-12 game-title">
                 Battle Clone Browser Game
             </div>
         </div>
+        {% endblock %}
         {% block content %}
         {% endblock %}
     </div>

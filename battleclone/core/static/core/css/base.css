@@ -8,6 +8,22 @@ body {
 a {
     color: white;
 }
+.game-container {
+    padding: 10px;
+    background: red;
+    border: 2px solid green;
+    border-radius: 3px;
+    box-shadow: 2px 2px grey;
+}
+
+.menu-item {
+    padding: 3px;
+    background: black;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px grey;
+    margin: 15px;
+}
 
 .game-title {
     text-align: center;
@@ -21,20 +37,53 @@ a {
 }
 
 .login-title {
-    margin: 0 auto;
+    width: 60%;
+    margin: 10px auto;
     text-align: center;
     padding: 1%;
     margin-bottom: 11px;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 1.5rem;
     color: #ffffff;
     font-weight: 600;
     text-shadow: 2px 2px #222222;
     letter-spacing: 2px;
-    background: linear-gradient(#9c2011, #6d0016);
+    box-shadow: 1px 1px rgba(0,0,0,0);
+    background: #333333;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dd1818, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+
 .form-group {
+    margin: 10px auto;
     color: #222222;
+}
+
+.form-group label {
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.form-group input {
+    width: 50%;
+    height: 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.login-form button {
+    width: 60%;
+    margin: 10px auto;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    background: green;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .login-form-error {
@@ -45,15 +94,16 @@ a {
 .login-form {
     margin: 0 auto;
     text-align: center;
-
 }
 
-#loginBtn {
-    width: 100%;
-    margin: 0 auto;
-}
 
 .register {
+    width: 60%;
     margin: 0 auto;
     text-align: right;
+}
+
+.register a {
+    color: black;
+
 }
