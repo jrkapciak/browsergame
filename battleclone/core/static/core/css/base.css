@@ -26,14 +26,35 @@ a {
 }
 
 .game-title {
+    padding-bottom: 10px;
     text-align: center;
-    padding: 4%;
     font-size: 3rem;
     color: #a01d10;
     font-family: 'Bellefair', serif;
     font-weight: 700;
     letter-spacing: 5px;
-    text-shadow: 3px 3px #222222;
+    text-shadow:
+            4px 4px 1px #300000,
+            4px 6px 1px #400000,
+       4px 8px 1px #500000,
+       4px 10px 1px #600000,
+       4px 12px 1px #700000,
+       4px 14px 1px #800000,
+       4px 16px 1px #900000,
+       4px 18px 1px #A00000,
+       4px 20px 1px #B00000,
+       4px 22px 1px #C00000,
+       4px 24px 1px #D00000,
+       4px 26px 1px #E00000,
+       4px 28px 1px #F00000,
+       4px 30px 1px #FA0000,
+       4px 32px 1px #FB0000,
+       4px 34px 1px #FC0000,
+       4px 36px 1px #FD0000,
+       4px 38px 1px #FE0000,
+       4px 40px 2px #FF0000;
+
+
 }
 
 .login-title {
@@ -73,17 +94,22 @@ a {
     padding: 10px;
 }
 
+
 .login-form button {
     width: 60%;
     margin: 10px auto;
     border: none;
-    border-radius: 2px;
+    border-radius: 5px;
     color: white;
-    background: green;
     padding: 5px;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 2px;
+
+    background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .login-form-error {
