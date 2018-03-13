@@ -1,8 +1,12 @@
+from ..models import Character
+
+# TODO: TYPINGS
+
 
 class HealthManager:
     """ Class responsible for character health managing"""
 
-    def __init__(self, character):
+    def __init__(self, character: Character):
         self.character = character
         self.actual_health = self.character.health
 

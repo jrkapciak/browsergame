@@ -8,24 +8,47 @@ class Parameters(models.Model):
     strength, agility, luck etc
 
     """
+    strength = models.PositiveIntegerField(
+        verbose_name=_("Strength"),
+        help_text=_("Character's stregnth"),
+        default=1,
+        validators=[MinValueValidator(1)]
+    )
 
+    agility = models.PositiveIntegerField(
+        verbose_name=_("Agility"),
+        help_text=_("Character's agility"),
+        default=1,
+        validators=[MinValueValidator(1)]
+    )
 
-class Equipment(models.Model):
-    """ Character equipment
+    defense = models.PositiveIntegerField(
+        verbose_name=_("Defense"),
+        help_text=_("Character's defense"),
+        default=1,
+        validators=[MinValueValidator(1)]
+    )
 
-        helmet, armor, boots, weapon etc
-    """
-    pass
+    durability = models.PositiveIntegerField(
+        verbose_name=_("Durability"),
+        help_text=_("Character's durability"),
+        default=1,
+        validators=[MinValueValidator(1)]
+    )
 
+    luck = models.PositiveIntegerField(
+        verbose_name=_("Luck"),
+        help_text=_("Character's Luck"),
+        default=1,
+        validators=[MinValueValidator(1)]
+    )
 
-class Vehicle(models.Model):
-    """ Vehicle like horse or something"""
-    pass
+    # TODO: what more?
 
-
-class Storage(models.Model):
-    """ Storage, place where we put not wearing clothes or unused items"""
-    pass
+    def __str__(self):
+        return 'Str: {}, Agi: {}, Def: {}, Dur: {}, Luck:{}'.format(
+            self.strength, self.agility, self.defense, self.durability, self.luck
+        )
 
 
 class Character(models.Model):
@@ -51,7 +74,7 @@ class Character(models.Model):
 
     health = models.PositiveSmallIntegerField(
         verbose_name=_("Health"),
-        help_text=_("Actuacl character'health value"),
+        help_text=_("Actual character'health value"),
         default=100,
         validators=[MaxValueValidator(100), MinValueValidator(0)]
     )
@@ -63,13 +86,6 @@ class Character(models.Model):
         validators=[MaxValueValidator(1000), MinValueValidator(0)]
     )
 
-    ruby_number = models.PositiveSmallIntegerField(
-        verbose_name=_('Ruby number'),
-        help_text=_('Number of avaiable rubies'),
-        default=0,
-        validators=[MaxValueValidator(1000), MinValueValidator(0)]
-    )
-
     parameters = models.OneToOneField(
         to=Parameters,
         on_delete=models.CASCADE,
@@ -78,6 +94,6 @@ class Character(models.Model):
     )
 
     def __str__(self):
-        return '{} level: {} HP:{} AP:{}'.format(
-            self.nickname, self.level, self.health, self.action_points
+        return 'id: {}. {} level: {} HP:{} AP:{}'.format(
+            self.id, self.nickname, self.level, self.health, self.action_points
         )
