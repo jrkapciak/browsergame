@@ -105,6 +105,7 @@ venv.bak/
 .mypy_cache/
 
 battleclonevenv/
+venv3.6/
 Assets/
 .idea
 db.sqlite3
