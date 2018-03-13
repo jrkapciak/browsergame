@@ -93,6 +93,30 @@ class Character(models.Model):
         help_text=_("Character's parameters"),
     )
 
+    on_mission = models.BooleanField(
+        verbose_name=_("On Mission flag"),
+        help_text=_("Is character on mission flag"),
+        default=False
+    )
+
+    mission_start_time = models.DateTimeField(
+        verbose_name=_("Mission start time"),
+        help_text=_("Mission start time"),
+        blank=True, null=True
+    )
+
+    at_work = models.BooleanField(
+        verbose_name=_("At work flag"),
+        help_text=_("Is character on work flag"),
+        default=False
+    )
+
+    work_start_time = models.DateTimeField(
+        verbose_name=_("Work start time"),
+        help_text=_("Work start time"),
+        blank=True, null=True
+    )
+
     def __str__(self):
         return 'id: {}. {} level: {} HP:{} AP:{}'.format(
             self.id, self.nickname, self.level, self.health, self.action_points
