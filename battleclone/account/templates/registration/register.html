@@ -10,10 +10,26 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-lg-4 login-form">
+    <div class="login-form">
         <form method="post" action="{% url 'signup' %}">{% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">click</button>
+            <div class="form-group">
+            {{ form.username.label_tag }}
+            {{ form.username }}
+            </div>
+            <div class="form-group">
+            {{ form.email.label_tag }}
+            {{ form.email}}
+            </div>
+            <div class="form-group">
+            {{ form.password.label_tag }}
+            {{ form.password }}
+            </div>
+             <div class="form-group">
+            {{ form.repeat_password.label_tag }}
+            {{ form.repeat_password }}
+            </div>
+            <button id="loginBtn" type="submit" value="login" class="">Signup</button>
+            <input type="hidden" name="next" value="{{ next }}" />
         </form>
     </div>
 </div>

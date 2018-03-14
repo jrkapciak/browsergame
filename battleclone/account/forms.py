@@ -5,17 +5,17 @@ from django.core.exceptions import ValidationError
 
 class SignUpForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
-    password2 = forms.CharField(widget=forms.PasswordInput)
+    repeat_password = forms.CharField(widget=forms.PasswordInput)
 
     class Meta:
         model = User
         fields = ['username', 'email']
 
-    def clean_password2(self):
+    def clean_repeat_password(self):
         data = self.cleaned_data
 
-        if data['password2'] != data['password']:
+        if data['repeat_password'] != data['password']:
             raise ValidationError("Password didn't match")
 
-        return data['password2']
+        return data['repeat_password']
 

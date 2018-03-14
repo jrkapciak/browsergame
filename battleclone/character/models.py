@@ -3,6 +3,15 @@ from django.utils.translation import gettext as _
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 
+BUSY_STATUS = (
+    ('FREE', _('Free')),
+    ('BUSY', _('Busy')),
+    ('MISSION', _('Mission')),
+    ('WORK', _('Work')),
+    ('REST', _('Rest')),
+)
+
+
 class Parameters(models.Model):
     """ Character parameters:
     strength, agility, luck etc
@@ -93,22 +102,18 @@ class Character(models.Model):
         help_text=_("Character's parameters"),
     )
 
-    on_mission = models.BooleanField(
-        verbose_name=_("On Mission flag"),
-        help_text=_("Is character on mission flag"),
-        default=False
+    status = models.CharField(
+        verbose_name=_("Character status"),
+        help_text=_("Is character at work, on mission etc?"),
+        choices=BUSY_STATUS,
+        default='FREE',
+        max_length=10
     )
 
     mission_start_time = models.DateTimeField(
         verbose_name=_("Mission start time"),
         help_text=_("Mission start time"),
         blank=True, null=True
-    )
-
-    at_work = models.BooleanField(
-        verbose_name=_("At work flag"),
-        help_text=_("Is character on work flag"),
-        default=False
     )
 
     work_start_time = models.DateTimeField(

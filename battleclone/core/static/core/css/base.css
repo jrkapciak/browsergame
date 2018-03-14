@@ -94,6 +94,10 @@ a {
     padding: 10px;
 }
 
+.form-group input:focus {
+    transform: scale(1.02);
+    outline: none;
+}
 
 .login-form button {
     width: 60%;
