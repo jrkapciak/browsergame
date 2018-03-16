@@ -2,14 +2,13 @@
 {% load static %}
 {% load i18n %}
 
-{% block game_header %}
+{#{% block game_header %}#}
 {# Remove header#}
-{% endblock %}
+{#{% endblock %}#}
 
 {% block content %}
 
 <div class="row">
-    <h2 style="text-align: center; color: red">Browser game</h2>
     <div class="col-12 game-container">
         <div class="col-12 character-info">
             <div class="col-1 character-bar-info">
@@ -18,27 +17,22 @@
             <div class="col-2 character-bar-info">
                     {{ object.character.nickname}}
             </div>
-
             <div class="col-2 character-bar-info">
-               Level:
+                {% trans 'Level:' %}
                 {{ object.character.level}}
             </div>
-
             <div class="col-2 character-bar-info">
-                Exp:
+                {% trans 'Exp:' %}
                 {{ object.character.experience_points}}/100
             </div>
-
                 <div class="col-2 character-bar-info">
-                    Zdrowie:
+                 {% trans 'Health:' %}
                 {{ object.character.health}}
             </div>
-
                 <div class="col-2 character-bar-info">
-                    Punkty:
+                 {% trans 'Points:' %}     
                 {{ object.character.action_points}}
             </div>
-
         </div>
     {% block menu %}
         <div class="col-2">
