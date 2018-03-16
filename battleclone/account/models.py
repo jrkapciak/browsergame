@@ -30,6 +30,7 @@ class UserProfile(models.Model):
     avatar = models.ImageField(
         verbose_name=_('Image'),
         help_text=_('Your account image'),
+        upload_to='user_profiles',
         null=True, blank=True
     )
 

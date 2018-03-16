@@ -9,20 +9,38 @@ a {
     color: white;
 }
 .game-container {
+    height: 80vh;
     padding: 10px;
-    background: red;
-    border: 2px solid green;
+    /*border: 2px solid green;*/
     border-radius: 3px;
     box-shadow: 2px 2px grey;
+
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
 }
 
 .menu-item {
-    padding: 3px;
+    display: block;
+    padding: 6px;
     background: black;
     text-align: center;
     border-radius: 5px;
     box-shadow: 2px 2px grey;
-    margin: 15px;
+    margin: 5px;
+    text-decoration: none;
+    width: 70%;
+    letter-spacing: 1px;
+}
+
+
+.menu-item:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    background: grey;
 }
 
 .game-title {
@@ -139,4 +157,29 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
 .register a {
     color: black;
 
+}
+
+
+.container {
+    width: 80% !important;
+    max-width: 90vw !important;
+}
+
+.character-bar-info {
+    color: white;
+    margin: 3%;
+    display: inline;
+}
+
+.character-info {
+    text-align: center;
+    max-height : 15%;
+    border-bottom: 2px solid red;
+}
+
+.avatar {
+    height: 70%;
+    padding: 4px;
+    border-radius: 10px;
+    float: left;
 }

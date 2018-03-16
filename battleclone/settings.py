@@ -134,3 +134,8 @@ STATICFILES_DIRS = ( os.path.join('static'), )
 LOGIN_REDIRECT_URL = 'game'
 LOGOUT_REDIRECT_URL = '/login'
 LOGIN_URL = '/login'
+
+
+# MEDIA
+MEDIA_ROOT = os.path.join(os.path.join('media'))
+MEDIA_URL = '/media/'

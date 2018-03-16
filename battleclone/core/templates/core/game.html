@@ -1,4 +1,5 @@
 {% extends 'core/base.html' %}
+{% load static %}
 {% load i18n %}
 
 {% block game_header %}
@@ -6,12 +7,45 @@
 {% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-12 game-container">
 
+<div class="row">
+    <h2 style="text-align: center; color: red">Browser game</h2>
+    <div class="col-12 game-container">
+        <div class="col-12 character-info">
+            <div class="col-1 character-bar-info">
+                <img src="{{ object.avatar.url }}" class="avatar">
+            </div>
+            <div class="col-2 character-bar-info">
+                    {{ object.character.nickname}}
+            </div>
+
+            <div class="col-2 character-bar-info">
+               Level:
+                {{ object.character.level}}
+            </div>
+
+            <div class="col-2 character-bar-info">
+                Exp:
+                {{ object.character.experience_points}}/100
+            </div>
+
+                <div class="col-2 character-bar-info">
+                    Zdrowie:
+                {{ object.character.health}}
+            </div>
+
+                <div class="col-2 character-bar-info">
+                    Punkty:
+                {{ object.character.action_points}}
+            </div>
+
+        </div>
     {% block menu %}
-        <div class="col-3">
+        <div class="col-2">
         {% include 'core/includes/menu.html' %}
+        </div>
+        <div class="col-10">
+            <h2 style="color: white; text-align: center;">content</h2>
         </div>
     {% endblock %}
 
