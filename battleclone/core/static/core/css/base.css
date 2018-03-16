@@ -34,6 +34,7 @@ a {
     text-decoration: none;
     width: 70%;
     letter-spacing: 1px;
+    margin-bottom: 15%;
 }
 
 
@@ -41,6 +42,10 @@ a {
     transform: scale(1.05);
     cursor: pointer;
     background: grey;
+}
+.menu {
+    border-right: solid 2px red;
+    height: 80%;
 }
 
 .game-title {

@@ -30,15 +30,15 @@
                 {{ object.character.health}}
             </div>
                 <div class="col-2 character-bar-info">
-                 {% trans 'Points:' %}     
+                 {% trans 'Points:' %}
                 {{ object.character.action_points}}
             </div>
         </div>
     {% block menu %}
-        <div class="col-2">
+        <div class="col-2 menu">
         {% include 'core/includes/menu.html' %}
         </div>
-        <div class="col-10">
+        <div class="col-9">
             <h2 style="color: white; text-align: center;">content</h2>
         </div>
     {% endblock %}
