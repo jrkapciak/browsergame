@@ -2,10 +2,6 @@
 {% load static %}
 {% load i18n %}
 
-{#{% block game_header %}#}
-{# Remove header#}
-{#{% endblock %}#}
-
 {% block content %}
 
 <div class="row">
@@ -34,16 +30,15 @@
                 {{ object.character.action_points}}
             </div>
         </div>
+
     {% block menu %}
         <div class="col-2 menu">
         {% include 'core/includes/menu.html' %}
         </div>
         <div class="col-9">
-            <h2 style="color: white; text-align: center;">content</h2>
+            {% block game_content %}
+            {% endblock %}
         </div>
-    {% endblock %}
-
-    {% block game_view %}
     {% endblock %}
     </div>
 </div>

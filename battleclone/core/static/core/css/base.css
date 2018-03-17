@@ -1,6 +1,4 @@
 body {
-    /*background: -webkit-linear-gradient(50deg, #3f3f3f, #000000);*/
-    /*background: linear-gradient(50deg, #3f3f3f, #000000);*/
     background-image: url('../images/background.jpg');
     color: white;
 }
@@ -11,16 +9,12 @@ a {
 .game-container {
     height: 80vh;
     padding: 10px;
-    /*border: 2px solid green;*/
-    border-radius: 3px;
+    border-radius: 10px;
     box-shadow: 2px 2px grey;
 
     background: #232526;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
 }
 
 .menu-item {
@@ -37,12 +31,12 @@ a {
     margin-bottom: 15%;
 }
 
-
 .menu-item:hover{
     transform: scale(1.05);
     cursor: pointer;
     background: grey;
 }
+
 .menu {
     border-right: solid 2px red;
     height: 80%;
@@ -164,7 +158,6 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
 
 }
 
-
 .container {
     width: 80% !important;
     max-width: 90vw !important;
@@ -188,3 +181,27 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
     border-radius: 10px;
     float: left;
 }
+
+.edit-profie-header {
+    text-align: center;
+}
+.edit-profie-header > h2 {
+    color: white;
+}
+
+.edit-profile-form-container {
+    text-align: center;
+}
+
+.edit-profile-form {
+    color: white;
+}
+.edit-profile-form > label{
+    color: white;
+
+}
+
+.edit-profile-form > a, input[name=avatar-clear], label[for=avatar-clear_id]{
+    display: none;
+}
+
