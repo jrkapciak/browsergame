@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'battleclone.account',
     'battleclone.core',
     'battleclone.character',
+    'battleclone.work',
 ]
 
 MIDDLEWARE = [

@@ -21,6 +21,7 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('battleclone.account.urls')),
+    url(r'', include('battleclone.work.urls')),
     url(r'', include('battleclone.core.urls')),
 
 

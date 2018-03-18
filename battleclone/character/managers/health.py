@@ -28,3 +28,8 @@ class HealthManager:
     def save_character(self):
         self.character.health = self.actual_health
         self.character.save()
+
+
+class Regeneration:
+    """ Class responsible for regeneration"""
+    pass
