@@ -10,3 +10,6 @@ class WorkModelForm(forms.ModelForm):
         widgets = {
             'work_type': Select
         }
+
+
+

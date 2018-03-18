@@ -1,6 +1,14 @@
 {% extends 'core/game.html' %}
 
 {% block game_content %}
-    {{ object }}
-    {{ form.as_p }}
+
+    {% if object.character.status == 'FREE' %}
+    <form method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">pracuj</button>
+    </form>
+    {% else %}
+        <h2>{{ object }}</h2>
+    {% endif %}
+
 {% endblock %}

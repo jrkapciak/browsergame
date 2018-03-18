@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext as _
 from battleclone.character.models import Character
+from django.utils import timezone
 
 
 HOURS = (
@@ -44,7 +45,7 @@ class Work(models.Model):
     started = models.DateTimeField(
         verbose_name=_('Started time'),
         help_text=_('Started time'),
-        null=True, blank=True
+        default=timezone.now
     )
 
     def __str__(self):

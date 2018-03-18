@@ -126,3 +126,9 @@ class Character(models.Model):
         return 'id: {}. {} level: {} HP:{} AP:{}'.format(
             self.id, self.nickname, self.level, self.health, self.action_points
         )
+
+    def update_status(self, new_status):
+        self.status = new_status
+        self.save()
+
+        return self.status
