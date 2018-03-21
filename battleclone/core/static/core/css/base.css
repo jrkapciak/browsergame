@@ -159,8 +159,8 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
 }
 
 .container {
-    width: 80% !important;
-    max-width: 90vw !important;
+    width: 98% !important;
+    max-width: 98vw !important;
 }
 
 .character-bar-info {

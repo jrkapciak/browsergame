@@ -1,0 +1,49 @@
+{% extends 'core/game.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block css %}
+   {{ block.super }}
+        <link rel="stylesheet" href="{% static 'character/css/character.css' %}">
+{% endblock %}
+
+
+{% block game_content %}
+
+{#      <div class="row">#}
+        <div class="col-4" id="character-attributes">
+            <ul>
+                <li>
+                    Strength:
+                    {{ character_attributes.strength }}
+                    <a href="#"> + </a>
+                </li>
+                <li>
+                    Agility:
+                    {{ character_attributes.agility }}
+                    <a href="#"> + </a>
+                </li>
+                <li>
+                    Defense:
+                    {{ character_attributes.defense }}
+                     <a href="#"> + </a>
+                </li>
+                <li>
+                    Durability:
+                    {{ character_attributes.durability }}
+                    <a href="#"> + </a>
+                </li>
+                <li>
+                    Luck:
+                    {{ character_attributes.luck }}
+                    <a href="#"> + </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-8" style="height: 90%;">
+            <div class="banner">
+                <img src="{% static '/character/images/chess-knight.png' %}" class="character-image">
+            </div>
+        </div>
+{#      </div>#}
+{% endblock %}

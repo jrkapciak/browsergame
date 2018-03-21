@@ -1,0 +1,39 @@
+.banner{
+    background-image: url('../images/romania-42061.svg');
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    text-align:center;
+    max-width:80%;
+    height: 95%    ;
+}
+.character-image{
+    height: 70%;
+    }
+
+#character-attributes{
+    height: 90%;
+    margin:0;
+    padding:0;
+    }
+
+#character-attributes ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    }
+#character-attributes li{
+    color: white;
+    font-size:2.2em;
+    }
+
+#character-attributes a{
+     text-decoration: none;
+    }
+
+
+@media only screen and (max-width: 1400px) {
+    #character-attributes li{
+        font-size:1.2em;
+    }
+}
