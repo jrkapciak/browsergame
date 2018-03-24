@@ -74,6 +74,13 @@ class Character(models.Model):
         validators=[MinValueValidator(1)]
     )
 
+    gold = models.IntegerField(
+        verbose_name=_('Gold'),
+        help_text=_('Character gold'),
+        default=0,
+        validators=[MinValueValidator(0)]
+    )
+
     experience_points = models.IntegerField(
         verbose_name=_("Experience points"),
         help_text=_('Actual experience points'),

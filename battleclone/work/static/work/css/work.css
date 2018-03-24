@@ -1,0 +1,32 @@
+#work-form {
+    text-align: center;
+    color: white;
+}
+
+#work-form select {
+    width: 30%;
+    background: red;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 2px;
+}
+
+#work-form select option {
+    background: grey;
+    text-align: center;
+}
+
+#work-form button {
+    padding: 10px;
+    width: 15%;
+    background: forestgreen;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
+
+#work-form button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}

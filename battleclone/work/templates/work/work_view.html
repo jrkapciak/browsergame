@@ -1,14 +1,22 @@
 {% extends 'core/game.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'work/css/work.css' %}">
+{% endblock %}
 
 {% block game_content %}
 
+    <h1 style="text-align: center; color: white;">WORK</h1>
     {% if object.character.status == 'FREE' %}
-    <form method="POST">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">pracuj</button>
+    <form method="POST" id="work-form">{% csrf_token %}
+        <h2 style="color: white; text-align: center;">Wybierz na ile godzin chcesz isc pracowac</h2>
+        <p>{{ form.work_type }}</p>
+        <button type="submit">Go to work</button>
     </form>
     {% else %}
         <h2>{{ object }}</h2>
     {% endif %}
 
 {% endblock %}
+
