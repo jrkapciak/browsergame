@@ -1,6 +1,7 @@
-from django.views.generic import FormView
+from django.views.generic import FormView, DetailView
 from .forms import WorkModelForm
 from battleclone.account.models import UserProfile
+from .models import Work
 
 
 class WorkView(FormView):
@@ -10,7 +11,16 @@ class WorkView(FormView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['object'] = UserProfile.objects.get(user=self.request.user)
+        user = self.request.user
+        context['object'] = UserProfile.objects.get(user=user)
+
+        try:
+            context['work_object'] = (Work.objects
+                                          .filter(character__userprofile__user=user)
+                                          .latest('started'))
+        except Work.DoesNotExist as e:
+            print("Does not exist")
+
         # TODO: add return work object -> maybe add new inheritance ? formview with detail view
         return context
 
